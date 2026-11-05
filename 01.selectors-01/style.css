@@ -1,12 +1,131 @@
+/* Universal Selector */
 * {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
 }
 
+/* Tag Selector */
 body {
     font-family: Arial, Helvetica, sans-serif;
     background-color: #f4f4f4;
     color: #333;
     line-height: 1.6;
+}
+
+h1 {
+    color: #444;
+    text-align: center;
+    margin-top: 20px;
+}
+
+/* Class Selector  */
+.lead {
+    font-size: 1.2em;
+    font-weight: bold;
+    margin: 1rem;
+}
+
+/* ID Selector */
+#main {
+    background-color: #fff;
+    padding: 2rem;
+    margin: 1rem;
+}
+
+/* Combined Selector */
+.wrapper .box {
+    background-color: #ddd;
+    padding: 1rem;
+    margin: 1rem;
+}
+
+.wrapper .box>p {
+    color: rgb(14, 31, 68);
+    font-size: 1em;
+}
+
+.wrapper p {
+    background-color: rgb(194, 97, 97);
+    margin: 1rem;
+}
+
+/* Attribute Selector */
+.attribute-example {
+    padding: 1rem;
+}
+
+.attribute-example a {
+    color: #007BFF;
+    text-decoration: none;
+}
+
+.attribute-example a:hover {
+    text-decoration: underline;
+}
+
+.attribute-example p[data-type="example"] {
+    color: #FF5733;
+    font-weight: bold;
+}
+
+.attribute-example a[href*="instagram"] {
+    color: #ee54c7;
+    font-style: italic;
+}
+
+.attribute-example a[href*="google"] {
+    color: #4ac587;
+    font-style: italic;
+}
+
+.attribute-example a[href*="youtube"] {
+    color: #dd1313;
+    font-style: italic;
+}
+
+/* Pseudo-Classes */
+.pseudo-class-example {
+    padding: 1rem;
+    background-color: #eee7e7;
+    border-radius: 5px;
+    margin: 1rem;
+}
+
+.pseudo-class-example .square {
+    width: 100px;
+    height: 100px;
+}
+
+.pseudo-class-example .square.square-one {
+    background-color: #ff5733;
+    margin-bottom: 10px
+}
+
+.pseudo-class-example .square.square-two {
+    background-color: #33c5ff;
+    margin-bottom: 10px
+}
+
+.pseudo-class-example .square.square-one:hover {
+    transition: opacity 0.3s ease;
+    opacity: 0.5;
+}
+
+.pseudo-class-example .square.square-two:active {
+    transform: rotate(45deg);
+    transition: transform 0.3s ease;
+}
+
+.pseudo-class-example input.input-field {
+    padding: 0.5rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    outline: none;
+    font-size: 1rem;
+}
+
+.pseudo-class-example input.input-field:focus {
+    border-color: #007BFF;
+    outline: none;
 }
